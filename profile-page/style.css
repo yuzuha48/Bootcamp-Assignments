@@ -1,0 +1,207 @@
+.nav {
+    height: 60px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-title {
+    color: white;
+    width: 125px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin: 0px 280px 0px 0px;
+}
+
+.nav-links a {
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    background-color: darkturquoise;
+    color: white;
+    border: 1px solid black;
+    padding: 5px;
+    justify-content: center;
+    box-shadow: 5px 5px 5px black;
+    width: 75px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.usercard {
+    height: 270px;
+    width: 400px;
+    background: linear-gradient(to bottom, lightseagreen 100px, white 100px);
+    border: 2px solid gray;
+    margin: 0px 20px 0px 0px;
+    padding: 30px 30px 10px 30px;
+    display: flex;
+    align-items: flex-end;
+}
+
+h1, h3 {
+    margin: 5px 0px;
+}
+
+img.usercircle {
+    height: 80px;
+    border: 2px solid gray;
+    border-radius: 50px;
+    padding: 3px;
+    background-color: white;
+}
+
+img {
+    height: 20px;
+}
+
+.map-marker, h3 {
+    display: inline-block;
+}
+
+h3 {
+    margin: 0px 0px 0px 5px;
+}
+
+p {
+    margin: 10px 0px 0px 0px;
+}
+
+.linetwo {
+    margin: 0px 0px 15px 0px;
+}
+
+a {
+    margin: 0px 0px 0px 5px;
+}
+
+.about img, a {
+    vertical-align: middle;
+}
+
+.connectionrequests {
+    height: 150px;
+    width: 250px;
+    margin: 0px 0px 20px 20px;
+    padding: 10px;
+    border: 2px solid gray;
+    background: linear-gradient(to bottom, rgb(72, 71, 71) 45px, white 45px);
+}
+
+.title {
+    color: white;
+    margin: 0px 10px 15px 10px;
+}
+
+.title #num {
+    color: rgb(72, 71, 71);
+    border: 2px solid rgb(168, 166, 166);
+    border-radius: 150px;
+    width: 25px;
+    background-color: rgb(168, 166, 166);
+    text-align: center;
+}
+
+.title #num2 {
+    color: rgb(72, 71, 71);
+    border: 2px solid rgb(168, 166, 166);
+    border-radius: 150px;
+    width: 50px;
+    background-color: rgb(168, 166, 166);
+    text-align: center;
+}
+
+.connectionrequests p {
+    width: 135px;
+} 
+
+.connectionrequests .action {
+    height: 30px;
+}
+
+.people img, .people p {
+    display: inline-block;
+}
+
+.toddpic, .philpic {
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.connections {
+    height: 300px;
+    width: 270px;
+    border: 2px solid gray;
+    margin: 0px 0px 0px 20px;
+    padding: 10px 0px 0px 0px;
+    background: linear-gradient(to bottom, rgb(72, 71, 71) 45px, white 45px);
+}
+
+.connections .people {
+    padding: 0px 10px 10px 10px;
+}
+
+.connections img {
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 50px;
+}
+
+.inside {
+    height: 260px;
+}
+
+.connections .inside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.view {
+    border: 1px solid gray;
+    border-width: 2px 0px 0px 0px;
+    height: 40px;
+    line-height: 35px;
+}
+
+.people img, .people p {
+    vertical-align: middle;
+}
+
+.people img {
+    margin: 10px 0px 0px 0px;
+}
+
+.education {
+    width: 440px;
+    background: linear-gradient(to bottom, rgb(72, 71, 71) 40px, white 40px);
+    border: 2px solid gray;
+    margin: 20px 0px 0px 0px;
+    padding: 10px;
+}
+
+.education .title {
+    margin: 0px 0px 10px 0px;
+}
+
+.education .content h2 {
+    height:13px;
+}
+
+.date {
+    color: gray;
+}
+
