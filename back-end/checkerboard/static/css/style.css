@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.square {
+    height: 30px;
+    width:30px;
+    border: 1px solid black;
+    display: flex;
+}
+
+.row {
+    display: flex;
+}
