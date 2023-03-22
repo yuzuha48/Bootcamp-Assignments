@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.click {
+    background-color: blue;
+    color: white;
+    width: 95px;
+    height: 30px;
+}
+
+.custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.add_visits {
+    background-color: green;
+    color: white;
+    width: 95px;
+    height: 30px;
+}
+
+.text_box {
+    width: 95px;
+}
+
+.reset {
+    background-color: red;
+    color: white;
+    width: 95px;
+    height: 30px;
+}
