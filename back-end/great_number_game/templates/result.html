@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking of a number between 1 and 100</p>
+    <p>Take a guess!</p>
+    {% if guess == goal %}
+        <div class="correct_result">
+            {{result}}
+        </div>
+    {% else %}
+        <div class="wrong_result">
+            {{result}}
+        </div>
+    {% endif %}
+    <p>Number of tries: {{count}}</p>
+    {% if result == "That's correct!" and count <= 5 %}
+        <form method="post" action="/leaderboard" class="leaderboard">
+            <div>
+                <label for="name">Add your name to the leaderboard!</label>
+            </div>
+            <div>
+                <input type="text" name="name">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+        <form action="/destroy_session">
+            <input type="submit" value="Try Again">
+        </form>
+    {% elif count < 5 %}
+        <form method="post" action="/guess">
+            <label for="name">Guess:</label>
+            <input type="text" name="guess">
+            <input type="submit" value="Submit">
+        </form>
+        <form action="/destroy_session">
+            <input type="submit" value="Reset">
+        </form>
+    {% elif count >= 5 %}
+        <form action="/destroy_session">
+            <input type="submit" value="Try again">
+        </form>
+    {% endif %}
+</body>
+</html>
