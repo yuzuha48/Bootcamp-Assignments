@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Dojo Survey</title>
+</head>
+<body>
+    <div class="container">
+        <form method="post" action="/result">
+            <div class="name">
+                <label for="name">Your Name:</label>
+                <input type="text" name="name">
+            </div>
+            <div class="location">
+                <label for="location">Dojo Location:</label><br>
+                    <input type="radio" id="san_jose" name="location" value="San Jose">
+                    <label for="san_jose">San Jose</label><br>
+                    <input type="radio" id="minneapolis" name="location" value="Minneapolis">
+                    <label for="minneapolis">Minneapolis</label><br>
+                    <input type="radio" id="new_york" name="location" value="New York">
+                    <label for="new_york">New York</label><br>
+                    <input type="radio" id="chicago" name="location" value="Chicago">
+                    <label for="chicago">Chicago</label><br>
+                    <input type="radio" id="denver" name="location" value="Denver">
+                    <label for="denver">Denver</label><br>
+            </div>
+            <div class="language">
+                <label for="language">Favorite Languages:</label><br>
+                    <input type="checkbox" id="python" name="language" value="Python">
+                    <label for="python"> Python</label><br>
+                    <input type="checkbox" id="java" name="language" value="Java">
+                    <label for="java"> Java</label><br>
+                    <input type="checkbox" id="c" name="language" value="C++">
+                    <label for="c"> C++</label><br>
+                    <input type="checkbox" id="javascript" name="language" value="Javascript">
+                    <label for="javascript"> JavaScript</label><br>
+                    <input type="checkbox" id="ruby" name="language" value="Ruby">
+                    <label for="ruby"> Ruby</label><br>
+            </div>
+            <div class="comment">
+                <label for="comment">Comment (optional):</label>
+                <textarea name="comment" rows="4" cols="50"></textarea>
+            </div>
+            <div class="submit">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

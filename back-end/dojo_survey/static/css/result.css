@@ -1,0 +1,32 @@
+* {
+    margin: 0px; 
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    border: solid black 2px;
+    padding: 20px;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0px;
+}
+
+input {
+    background-color: cornflowerblue;
+    color: white;
+    width: 65px;
+}

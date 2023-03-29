@@ -1,0 +1,36 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    border: solid black 2px;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.submit input {
+    background-color: cornflowerblue;
+    color: white;
+    width: 60px;
+}
+
+
+
