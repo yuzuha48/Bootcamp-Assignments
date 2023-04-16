@@ -1,0 +1,18 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 10px;
+}
+
+.places {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.restart {
+    margin-bottom: 20px;
+}
