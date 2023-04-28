@@ -1,0 +1,22 @@
+body {
+    padding: 20px;
+}
+
+.dojo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.new_dojo input {
+    margin-bottom: 20px;
+}
+
+.list_of_dojos {
+    border: 1px solid black;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.home {
+    margin-top: 60px;
+}
