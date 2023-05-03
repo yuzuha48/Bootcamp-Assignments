@@ -1,0 +1,36 @@
+body {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.ab_container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.new input {
+    margin-bottom: 20px;
+}
+
+.new {
+    width: 45%;
+}
+
+.all {
+    width: 45%;
+}
+
+.list_of_all {
+    border: 1px solid black;
+}
+
+.add {
+    margin-top: 20px;
+}
+
+.home {
+    margin-top: 60px;
+}
