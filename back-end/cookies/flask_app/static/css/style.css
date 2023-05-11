@@ -1,0 +1,12 @@
+* {
+    padding: 10px;
+}
+
+.orders {
+    display: flex;
+    justify-content: space-between;
+}
+
+form p {
+    color: red;
+}
