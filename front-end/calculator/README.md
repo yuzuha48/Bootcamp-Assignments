@@ -1,3 +1,3 @@
 ## Calculator 🧮 
 
-Adds, subtracts, multiplies, and divides numbers 
+Adds, subtracts, multiplies, and divides numbers. 
