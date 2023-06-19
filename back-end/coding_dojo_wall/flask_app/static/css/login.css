@@ -1,0 +1,20 @@
+* {
+    margin-top: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.registration {
+    color: #5bc0de;
+}
+
+.login {
+    color: #5cb85c;
+}
+
+.card {
+    width: 25%;
+}
