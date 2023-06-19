@@ -1,4 +1,4 @@
-## Users with Bank Accounts
+## Users with Bank Accounts 🏦
 
 The BankAccount class defines methods that:
 - 🏦 Creates an account that takes in a balance and an interest rate
