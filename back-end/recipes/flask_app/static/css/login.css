@@ -1,0 +1,30 @@
+body {
+    padding: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+}  
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+} 
+
+.registration {
+    color: #5bc0de;
+}
+
+.login {
+    color: #5cb85c;
+}
+
+.card {
+    width: 250px;
+}
