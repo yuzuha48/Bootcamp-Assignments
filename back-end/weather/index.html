@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Forecast</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="nav">
+            <h1>DojoWeather</h1>
+            <ul>
+                <li onclick="getWeather(34.1808, -118.3090), getCity(this)">Burbank</li>
+                <li onclick="getWeather(41.8781, -87.6298), getCity(this)" >Chicago</li>
+                <li onclick="getWeather(32.7767, -96.7970), getCity(this)" >Dallas</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="top">
+                <h2 class="city">San Jose</h2>
+                <p>show temperature in
+                <select class="selectTemp" name="selectTemp" onchange="convertTemp(this)">
+                    <option>°C</option>
+                    <option>°F</option>
+                </select>
+                </p>
+            </div>
+            <div class="day">
+                <h3>Today</h3>
+                <img class="image" src="assets/some_rain.png" alt="some_rain">
+                <p class="description">some rain</p>
+                <div class="temperature today">
+                    <p class="high">24°</p>
+                    <p class="low">18°</p>
+                </div>
+            </div>
+            <div id="cookie" onclick="removeCookie()">
+                <div class="left">
+                    <img src="assets/cookie.png" alt="cookie">
+                    <div class="notice">
+                        <p><strong>Stop! Cookie time</strong></p>
+                        <p>We use cookies (sadly not the edible ones) to personalize content and ads, to provide social media features and to analyse our traffic. <a href="#">Read more...</a></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <button>I Accept</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
