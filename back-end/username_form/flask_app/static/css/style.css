@@ -1,0 +1,16 @@
+body {
+    padding: 20px;
+}
+
+.container  {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
