@@ -1,0 +1,81 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+body {
+    background-image: url("/static/images/brick-background.png");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: rgba(54, 53, 53);
+    border: 5px solid red;
+    padding: 20px;
+    width: 500px;
+}
+
+.hero-search {
+    font-size: 30px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+img {
+    width: 80%;
+    height: 80%; 
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    padding-top: 40px;
+}
+
+.name {
+    color: blue;
+    font-size: 120%;
+    margin-top: 10px;
+}
+
+.human {
+    color: yellow;
+    font-size: 100%;
+}
+
+.error {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: gray;
+    border: 5px solid red;
+}
+
+.error p {
+    font-size: 120%;
+}
+
+p {
+    margin-bottom: 0px;
+}
