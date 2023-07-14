@@ -1,0 +1,21 @@
+.words, .time {
+    border: 1px solid black;
+    border: 1px solid black;
+    width: max-content;
+}
+
+.words {
+    padding: 10px;
+}
+
+.time {
+    padding: 20px;
+}
+
+body {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
