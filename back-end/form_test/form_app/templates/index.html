@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <form action="/result" method="post">
+        {% csrf_token %}
+        <label for="name">Your Name:</label>
+        <input id="name" type="text" name="name">
+        <label for="dojo_location">Dojo Location:</label>
+        <div id="dojo_location"> 
+            <input type="radio" id="san_diego" name="location" value="San Diego">
+            <label for="san_diego">San Diego</label>
+            <input type="radio" id="new_york" name="location" value="New York">
+            <label for="new_york">New York</label>
+            <input type="radio" id="chicago" name="location" value="Chicago">
+            <label for="chicago">Chicago</label>
+        </div>
+        <label for="fav_language">Favorite Language:</label>
+        <div id="fav_language">
+            <input type="checkbox" id="python" name="language1" value="Python">
+            <label for="python">Python</label>
+            <input type="checkbox" id="java" name="language2" value="Java">
+            <label for="java">Java</label>
+            <input type="checkbox" id="javascript" name="language3" value="JavaScript">
+            <label for="javascript">JavaScript</label>
+        </div>
+        <label for="comment">Comment (optional):</label>
+        <textarea id="comment" rows="5" cols="30" name="comment"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
