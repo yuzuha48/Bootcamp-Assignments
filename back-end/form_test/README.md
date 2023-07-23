@@ -1,3 +1,3 @@
-## Form Test (Django) 📝
+## Form Test 📝
 
-Users can fill out a survey and see their submitted information when they hit "submit" 
+Used Django to allow users to fill out a survey and see their submitted information upon hitting the "submit" button. 
