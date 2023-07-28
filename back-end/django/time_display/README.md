@@ -1,3 +1,3 @@
 ## Time Display ⏰
 
-Used Django to display the current time. 
+Displays the current time. 
