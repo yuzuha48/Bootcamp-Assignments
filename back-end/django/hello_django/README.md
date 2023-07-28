@@ -1,6 +1,6 @@
 ## Hello Django 👋
 
-Used Django to route users to different paths. 
+Users can navigate to different paths. 
 
 * The root path will route to /blogs which contains a placeholder to later display a list of all blogs
 * /blogs/new will route to placeholder to display a new form to create a new blog
