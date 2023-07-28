@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Counter</h1>
+    <div class="words">
+        <p><strong>Counter: </strong>{{request.session.count}} times.</p>
+        <p><strong>Page Visits: </strong>{{request.session.visits}} visits.</p>
+    </div>
+    <div class="buttons">
+        <a href="/destroy_session">
+            <button>Reset</button>
+        </a>
+        <a href="/add_two">
+            <button>Add Two</button>
+        </a>
+    </div>
+    <form action="/add_count" method="post">
+        {% csrf_token %}
+        <label for="num">Determine Count:</label>
+        <input type="number" id="num" name="num">
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
