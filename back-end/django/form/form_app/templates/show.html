@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body>
+    <div class="info">
+        <h2>Submitted Info</h2>
+        <p><strong>Name: </strong>{{data.name}}</p>
+        <p><strong>Dojo Location: </strong>{{data.location}}</p>
+        <div class="fav_languages">
+            <p><strong>Favorite Languages:</strong></p>
+            {% for key, val in data.language.items %} 
+                {% if val != None %}
+                    <ul>
+                        <li>{{val}}</li>
+                    </ul>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <p><strong>Comment: </strong>{{data.comment}}</p>
+    </div>
+</body>
+</html>
