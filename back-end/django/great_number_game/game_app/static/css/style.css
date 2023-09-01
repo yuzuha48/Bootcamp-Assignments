@@ -1,0 +1,53 @@
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.guess {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.correct {
+    margin: 20px 0px;
+    font-size: 20px;
+    background-color: green;
+    color: white; 
+    border: 1px solid black; 
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrong {
+    margin: 20px 0px;
+    font-size: 20px;
+    background-color: red;
+    color: white; 
+    border: 1px solid black; 
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}

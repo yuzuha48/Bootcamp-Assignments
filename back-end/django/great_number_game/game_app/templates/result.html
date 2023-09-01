@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Great Number Game</title>
+</head>
+<body>
+    <div class="guess">
+        <h1>Welcome to the Great Number Game!</h1>
+        <p>I am thinking of a number between 1 and 100</p>
+        <p>Take a guess!</p>
+        <p>Number of attempts: {{count}}</p>
+        {% if result == "You win!" %} 
+            <div class="correct">
+                <p>You win!</p>
+            </div>
+            <form action="leaderboard" method="post">
+                {% csrf_token %}
+                <label for="name">Add your name to the leaderboard!</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <input type="submit" value="Submit" type="button" class="btn btn-primary">
+            </form>
+        {% elif result == "Too low!" %} 
+            <div class="wrong">
+                <p>Too low!</p>
+            </div>
+            <form action="/guess" method="post">
+                {% csrf_token %}
+                <input type="number" name="guess">
+                <input type="submit" value="Submit" type="button" class="btn btn-primary">
+            </form>
+        {% elif result == "Too high!" %} 
+            <div class="wrong">
+                <p>Too high!</p>
+            </div>
+            <form action="/guess" method="post">
+                {% csrf_token %}
+                <input type="number" name="guess">
+                <input type="submit" value="Submit" type="button" class="btn btn-primary">
+            </form>
+        {% elif result == "You lose..." %} 
+            <div class="wrong">
+                <p>You lose...</p>
+            </div>
+            <a href="/" type="button" class="btn btn-primary">Play again!</a>
+        {% endif %}
+</body>
+</html>
