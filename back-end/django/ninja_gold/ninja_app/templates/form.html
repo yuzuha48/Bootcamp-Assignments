@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Specify Win Conditions</title>
+</head>
+<body>
+    <div class="box">
+        <form action="/ninja_gold" method="post">
+            {% csrf_token %}
+            <h2>Please specify desired win conditions for Ninja Gold</h2>
+            <div class="form_field">
+                <p>Collect </p><input type="number" name="goal" id="goal"><p> golds.</p>
+            </div>
+            <div class="form_field">
+                <p>Complete within </p><input type="number" name="moves" id="moves"><p> moves.</p>
+            </div>
+            <input type="submit" value="Start Game!" class="btn btn-primary">
+        </form>
+    </div>
+</body>
+</html>

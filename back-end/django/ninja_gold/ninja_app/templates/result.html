@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/form.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Result</title>
+</head>
+<body>
+    {% if result == "won" %}
+        <div class="box">
+            <h2>You won!</h2>
+            <p>You collected {{total_gold}} golds in {{total_moves}} moves!</p>
+            <p>Your goal was to collect {{goal}} golds in {{moves}} moves.</p>
+            <p>Good job!</p>
+            <a href="/" class="btn btn-primary">Play again</a>
+        </div>
+    {% elif result == "lost" %}
+        <div class="box">
+            <h2>You lost...</h2>
+            {% if total_gold < 0 %}
+                <p>You've lost {% widthratio total_gold 1 -1 %} golds in {{total_moves}} moves.</p>
+            {% elif total_gold > 0 %}
+                <p>You collected {{total_gold}} golds in {{total_moves}} moves.</p>
+            {% endif %}
+            <p>Your goal was to collect {{goal}} golds in {{moves}} moves.</p>
+            <p>Better luck next time.</p>
+            <a href="/" class="btn btn-primary">Play again</a>
+        </div>
+    {% endif %}
+</body>
+</html>

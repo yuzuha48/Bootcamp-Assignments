@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Ninja Gold</title>
+</head>
+<body>
+    <p>Your Gold: {{total_gold}}</p>
+    <div class="places"> 
+        <div class="card">
+            <div class="card-body">
+                <h3>Farm</h3>
+                <p>(earns 10-20 golds)</p>
+                <!-- <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="location" value="farm">
+                    <input type="submit" class="btn btn-primary" value="Find Gold!">
+                </form> -->
+                <a href="/process_money/farm" class="btn btn-primary">Find Gold!</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3>Cave</h3>
+                <p>(earns 5-10 golds)</p>
+                <!-- <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="location" value="cave">
+                    <input type="submit" class="btn btn-primary" value="Find Gold!">
+                </form> -->
+                <a href="/process_money/cave" class="btn btn-primary">Find Gold!</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3>House</h3>
+                <p>(earns 2-5 golds)</p>
+                <!-- <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="location" value="house">
+                    <input type="submit" class="btn btn-primary" value="Find Gold!">
+                </form> -->
+                <a href="/process_money/house" class="btn btn-primary">Find Gold!</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h3>Casino</h3>
+                <p>(earns 0-50 golds)</p>
+                <!-- <form action="/process_money" method="post">
+                    {% csrf_token %}
+                    <input type="hidden" name="location" value="casino">
+                    <input type="submit" class="btn btn-primary" value="Find Gold!">
+                </form> -->
+                <a href="/process_money/casino" class="btn btn-primary">Find Gold!</a>
+            </div>
+        </div>
+    </div>
+    <div class="activities">
+        <p>Activities:</p>
+        {% if activities %}
+            {% for activity in activities reversed %}
+                {% if activity.delta_gold > 0 %}
+                    <div class="alert alert-success" role="alert">
+                        <p>Earned {{activity.delta_gold}} golds from the {{activity.location}}! ({{activity.date_time}})</p>
+                    </div>
+                {% elif activity.delta_gold < 0 %}
+                    <div class="alert alert-danger" role="alert">
+                        <p>Entered {{activity.location}} and lost {% widthratio activity.delta_gold 1 -1 %} golds... Ouch... ({{activity.date_time}})</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+</body>
+</html>
