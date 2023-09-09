@@ -1,0 +1,66 @@
+QUERY: Create 3 new dojos 
+
+Dojo.objects.create(name="San Diego Dojo", city="San Diego", state="CA")
+Dojo.objects.create(name="Chicago Dojo", city="Chicago", state="IL")
+Dojo.objects.create(name="New York Dojo", city="New York", state="NY")
+
+
+QUERY: Delete the 3 dojos you just created 
+
+c = Dojo.objects.get(id=1)
+c.delete()
+
+c = Dojo.objects.get(id=2)
+c.delete()
+
+c = Dojo.objects.get(id=2)
+c.delete()
+
+
+QUERY: Create 3 more dojos 
+
+Dojo.objects.create(name="Minneapolis Dojo", city="Minneapolis", state="MN")
+Dojo.objects.create(name="Seattle Dojo", city="Seattle", state="WA")
+Dojo.objects.create(name="Miami Dojo", city="Miami", state="FL")
+
+
+QUERY: Create 3 ninjas that belong to the first dojo
+
+Ninja.objects.create(first_name="Yuzuha", last_name="Shibata", dojo=Dojo.objects.get(id=4))
+Ninja.objects.create(first_name="Jackson", last_name="Muehlbauer", dojo=Dojo.objects.get(id=4))
+Ninja.objects.create(first_name="Mork", last_name="Muehlbauer", dojo=Dojo.objects.get(id=4))
+
+
+QUERY: Create 3 ninjas that belong to the second dojo
+
+Ninja.objects.create(first_name="Sophia", last_name="Sasaki", dojo=Dojo.objects.get(id=5))
+Ninja.objects.create(first_name="Chelsea", last_name="Sasaki", dojo=Dojo.objects.get(id=5))
+Ninja.objects.create(first_name="JOnah", last_name="Sasaki", dojo=Dojo.objects.get(id=5))
+
+
+QUERY: Create 3 ninjas that belong to the third dojo
+
+Ninja.objects.create(first_name="Kaylee", last_name="Do", dojo=Dojo.objects.get(id=6))
+Ninja.objects.create(first_name="Juthi", last_name="Dewan", dojo=Dojo.objects.get(id=6))
+Ninja.objects.create(first_name="James", last_name="Yang", dojo=Dojo.objects.get(id=6))
+
+
+QUERY: Retrieve all the ninjas from the first dojo
+
+Ninja.objects.filter(dojo = Dojo.objects.get(id=4))
+
+
+QUERY: Retrieve all the ninjas from the last dojo
+
+Ninja.objects.filter(dojo = Dojo.objects.get(id=6))
+
+
+QUERY: Retrieve the last ninja's dojo
+
+n = Ninja.objects.get(id=9)
+n.dojo
+
+
+QUERY: Create a new dojo
+
+Dojo.objects.create(name="New York Dojo", city="New York", state="NY", desc="The best dojo because it's in the best US city!")
