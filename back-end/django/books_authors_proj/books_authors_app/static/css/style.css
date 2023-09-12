@@ -1,0 +1,20 @@
+body {
+    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.add, .all {
+    width: 40%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin-top: 10px;
+    width: fit-content;
+}

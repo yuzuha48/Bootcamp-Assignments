@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Books & Authors</title>
+</head>
+<body>
+    <div class="add">
+        <h2>Add an Author</h2>
+        <form action="/add_author" method="post">
+            {% csrf_token %}
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name">
+            <label for="notes">Notes</label>
+            <textarea rows="3" cols="20" id="notes" name="notes"></textarea>
+            <input type="submit" value="Add" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="all">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            {% for one_author in all_authors %}
+            <tbody>
+                <tr>
+                    <td>{{one_author.id}}</td>
+                    <td>{{one_author.first_name}} {{one_author.last_name}}</td>
+                    <td><a href="/view_author/{{one_author.id}}">View</tr>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <a href="/">see books</a>
+    </div>
+</body>
+</html>

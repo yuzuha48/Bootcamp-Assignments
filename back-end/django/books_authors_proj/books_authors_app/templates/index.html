@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Books & Authors</title>
+</head>
+<body>
+    <div class="add">
+        <h2>Add a Book</h2>
+        <form action="/add_book" method="post">
+            {% csrf_token %}
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title">
+            <label for="desc">Description</label>
+            <textarea rows="3" cols="20" id="desc" name="desc"></textarea>
+            <input type="submit" value="Add" class="btn btn-primary">
+        </form>
+    </div>
+    <div class="all">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            {% for one_book in all_books %}
+            <tbody>
+                <tr>
+                    <td>{{one_book.id}}</td>
+                    <td>{{one_book.title}}</td>
+                    <td><a href="/view/{{one_book.id}}">View</tr>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+        <a href="/authors">see authors</a>
+    </div>
+</body>
+</html>
