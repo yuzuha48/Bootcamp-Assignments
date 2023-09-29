@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/new.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script type="text/javascript" src="{ % static 'js/script.js' %}" defer></script> -->
+    <title>Update</title>
+</head>
+<body>
+    <a href="/shows">Go Back</a>
+    <div class="page">
+        <div class="content">
+            <h1>Edit Show {{show.id}}</h1>
+            <div type="hidden" id="show_id" value="{{show.id}}"></div>
+            {% if messages %}
+            <div class="alert alert-danger" role="alert"> 
+                <div class="messages">
+                    {% for message in messages %} 
+                        <p {% if message.tags %} class="{{message.tags}}" {% endif %}>{{message}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <!-- <div id="errorMessage"></div> -->
+            <form action="/shows/{{show.id}}/update" method="post" id="updateUserForm">
+                {% csrf_token %}
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" value="{{show.title}}">
+                <div>
+                    <label for="network">Network</label>
+                    <input type="text" id="network" name="network" value="{{show.network}}">
+                    <label for="date">Release Date</label>
+                    <input type="date" id="date" name="date" value="{{show.date|date:'Y-m-d'}}">
+                </div>
+                <label for="desc">Description</label>
+                <textarea rows="5" cols="20" id="desc" name="desc">{{show.desc}}</textarea>
+                <input type="submit" value="Update" class="btn btn-primary">
+            </form>
+            <a href="/shows/{{show.id}}">Go to Show</a>
+        </div>
+    </div>
+</body>
+</html>
