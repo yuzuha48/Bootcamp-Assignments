@@ -1,4 +1,4 @@
-## Login & Registration and the Coding Dojo Wall 📝
+## Login and Registration & the Coding Dojo Wall 📝
 
 * ➡️ Users can login or register (validations included).
 * 💬 Once logged in, users can post a message (validations included) and/or see all posted messages and their comments.
