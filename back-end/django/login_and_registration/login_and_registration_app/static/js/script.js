@@ -64,7 +64,7 @@ if (registerForm) {
         }
 
         if (password_elem !== null && password_elem !== undefined) {
-            const password = password_elem.value;
+            var password = password_elem.value;
             if (password.length < 8) {
                 errors['password'] = 'Password should be at least 8 characters.'
             }
