@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    padding: 20px; 
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end !important;
+    gap: 20px;
+}
+
+.user_info {
+    margin-bottom: 5%;
+}
+
+.books {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}

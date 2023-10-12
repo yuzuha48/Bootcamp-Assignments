@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'users_app/css/user.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>User Reviews</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/books">Home</a>
+        <a href="/books/add">Add Book and Review</a>
+        <a href="/">Logout</a>
+    </div>
+    <div class="content">
+        <div class="user_info">
+            <h4>User Alias: {{user.alias}}</h4>
+            <p>Name: {{user.name}}</p>
+            <p>Email: {{user.email}}</p>
+            <p>Total Reviews: {{num_of_reviews}}</p>
+        </div>
+        <div class="reviews">
+            <h3>Posted Reviews on the following books:</h3>
+            <div class="books">
+                {% for book, id in all_books.items %}
+                <a href="/books/{{id}}">{{book}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
