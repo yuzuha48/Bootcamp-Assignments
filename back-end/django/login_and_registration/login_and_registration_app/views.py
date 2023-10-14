@@ -17,7 +17,7 @@ def register(request):
     else:  
         password = request.POST['password']
         pw = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
-        user = User.objects.create(first_name=request.POST['first_name'], last_name=request.POST['last_name'], email=request.POST['email'], password=pw)
+        user = User.objects.create(first_name=request.POST['first_name'], last_name=request.POST['last_name'], email=request.POST['email'], birthday=request.POST['birthday'], password=pw)
         request.session['user_id'] = user.id
         return JsonResponse({'success': True})
     
